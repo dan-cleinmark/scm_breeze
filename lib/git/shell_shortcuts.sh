@@ -113,7 +113,7 @@ if [ "$shell_ls_aliases_enabled" = "true" ] && which ruby > /dev/null 2>&1; then
   function ls_with_file_shortcuts {
     local ll_output
     if [ "$_ls_bsd" != "BSD" ]; then
-      ll_output="$(\ls -lhv --group-directories-first --color "$@")"
+      ll_output="$(\ls -lha --group-directories-first --color "$@")"
     else
       ll_output="$(CLICOLOR_FORCE=1 \ls -l -G "$@")"
     fi
